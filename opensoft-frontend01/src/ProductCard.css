@@ -1,0 +1,62 @@
+.prodCard{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #072c12;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: whitesmoke;
+    width: 45%;
+}
+
+.title{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 0);
+}
+
+.image img{
+    height: 15rem;
+    width: 80%;
+    display: inline-block;
+    margin: 1rem;;
+}
+
+.desc{
+    font-size: 1rem;
+}
+
+.price{
+    font-size: 1.2rem;
+    color: lightgreen;
+    margin-top: 1rem;
+}
+.add-btn{
+    border: none;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: rgb(190, 250, 190);
+    color: rgb(8, 61, 8);
+    font-weight: 900;
+}
+
+.add-btn:hover{
+    background-color: rgb(8, 61, 8);
+    color: rgb(190, 250, 190);
+    border: 0.2rem solid #a33327;
+    padding: 0.8rem;
+}
+
+.counter{
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem;
+}
+
+.down-btn, .up-btn{
+    height: 1rem;
+    margin: 0.5rem;
+}
+
+.count{
+    font-size: 1.2rem;
+    margin: 0.5rem;
+}
