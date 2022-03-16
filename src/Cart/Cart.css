@@ -1,0 +1,46 @@
+.cart-list{
+    background-color: #689775;
+    width: 70%;
+    margin: auto;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+}
+
+.cartCard{
+    display: flex;
+    padding: 1rem;
+    margin: 1rem;
+    border-bottom: #292942 solid ;
+}
+
+.item-img img{
+    height: 12rem;
+}
+
+.item-img{
+    margin: 1rem;
+}
+
+.item-details{
+    margin: 1rem;
+    width: 100%;
+}
+
+.qty{
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+.total-price{
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: right;
+    color: #1d6cff;
+}
+
+.empty-cart{
+    font-size: 2rem;
+    margin: 1rem;
+    color: brown;
+    text-align: center;
+}
