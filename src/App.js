@@ -6,6 +6,7 @@ import Homepage from "./Homepage/Homepage";
 import Cart from "./Cart/Cart";
 import Signin from "./SigninNSignup/Signin";
 import Signup from "./SigninNSignup/Signup";
+import BlogDetails from "./BlogDetails";
 
 class App extends Component {
   constructor(props) {
@@ -82,6 +83,9 @@ class App extends Component {
               </Route>
               <Route exact path="/Signup" >
                 <Signup />
+              </Route>
+              <Route path="/restaurants/:id">
+                  <BlogDetails />
               </Route>
             </Switch>
           </div>
