@@ -25,9 +25,11 @@
 }
 
 .cat-intro{
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 2rem;
     color: rgb(0, 51, 0);
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
 }
 .category a{
     text-decoration: none;
@@ -40,3 +42,29 @@
 .homepage{
     background-color: lightgreen;
 }
+
+.post {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+   
+  }
+
+.post-preview {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    padding-bottom :10px ;
+    background-color: #FFF7BC;
+    font-family: 'Noto Sans', sans-serif;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #116530;
+    margin-bottom: 50px;
+  }
+
+  .restaurant{
+      font-size: 28px;
+      color: #0B4619;
+      text-decoration: none;
+  }
