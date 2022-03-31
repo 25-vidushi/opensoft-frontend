@@ -1,0 +1,129 @@
+{
+    "restaurants":[
+        {
+            "restname": "smartpin",
+            "location":"kharagpur",
+            "rating":4.5,
+            "totalRating":190,
+            "openTime":"9:00",
+            "closeTime":"9:00",
+            "items":[
+                {
+                    "itemName":"chicken curry",
+                    "price":200,
+                    "id":1
+                },
+                {
+                    "itemName":"paneer masala",
+                    "price":150,
+                    "id":2
+                },
+                {
+                    "itemName":"roti",
+                    "price":20,
+                    "id":3
+                },
+                {
+                    "itemName":"fried rice",
+                    "price":180,
+                    "id":4
+                }
+            ],
+            "id":1
+        },
+        {
+            "restname": "foodcity",
+            "location":"mednipur",
+            "rating":4,
+            "totalRating":150,
+            "openTime":"9:30",
+            "closeTime":"9:30",
+            "items":[
+                {
+                    "itemName":"veg briyani",
+                    "price":160,
+                    "id":1
+                },
+                {
+                    "itemName":"mixed fried rice",
+                    "price":120,
+                    "id":2
+                },
+                {
+                    "itemName":"dal",
+                    "price":80,
+                    "id":3
+                },
+                {
+                    "itemName":"chicken briyani",
+                    "price":180,
+                    "id":4
+                }
+            ],
+            "id":2
+
+        },
+        {
+            "restname": "citybytes",
+            "location":"kolkata",
+            "rating":3.5,
+            "totalRating":120,
+            "openTime":"10:00",
+            "closeTime":"10:00",
+            "items":[
+                {
+                    "itemName":"noodles",
+                    "price":80,
+                    "id":1
+                },
+                {
+                    "itemName":"momos",
+                    "price":90,
+                    "id":2
+                },
+                {
+                    "itemName":"burger",
+                    "price":70,
+                    "id":3
+                },
+                {
+                    "itemName":"cake",
+                    "price":400,
+                    "id":4
+                }
+            ],
+            "id":3
+        },
+        {
+            "restname": "tikka",
+            "location":"bapura",
+            "rating":4.5,
+            "totalRating":90,
+            "openTime":"9:30",
+            "closeTime":"11:00",
+            "items":[
+                {
+                    "itemName":"roll",
+                    "price":75,
+                    "id":1
+                },
+                {
+                    "itemName":"paratha",
+                    "price":50,
+                    "id":2
+                },
+                {
+                    "itemName":"chilli panner",
+                    "price":120,
+                    "id":3
+                },
+                {
+                    "itemName":"maggi",
+                    "price":60,
+                    "id":4
+                }
+            ],
+            "id":4
+        }
+    ]
+}

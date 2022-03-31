@@ -1,6 +1,6 @@
 import React from 'react';
 import cartIcon from '../icons/cart-red.png';
-import logo from '../icons/logo.png';
+ /*import logo from '../icons/logo.png'; */
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 

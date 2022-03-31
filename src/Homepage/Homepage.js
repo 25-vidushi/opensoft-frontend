@@ -1,10 +1,28 @@
 import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+/*import BlogList from "../indRestaurant"; */
 
-import ProductCard from "../ProductCard";
 import coverimage from "./coverimage.jpg";
 import "./Homepage.css";
 
-const Homepage = ({handlers}) => {
+const Homepage = () => {
+
+  const [restaurant, setRestaurant]=useState(null);
+
+  useEffect(()=>{
+    fetch('http://localhost:8000/restaurants')
+    .then(res=>{
+      return res.json()
+    })
+    .then((data)=>{
+       console.log(data)
+       setRestaurant(data)
+    });
+  },[]);
+  
+
   return (
     <div className="homepage">
       <div className="cover">
@@ -17,13 +35,25 @@ const Homepage = ({handlers}) => {
         </p>
       </div>
       <div className="cat-intro">
-        Check out the delicacies we have to offer:
+        Check out the restaurants you like for order:
       </div>
-      <div className="category">
-        <ProductCard addHandler={handlers[0]} increaseHandler={handlers[1]} decreaseHandler={handlers[2]} returnCount={handlers[3]} product = {{productID: '1', title: 'Chole Bhature', description: 'Awesome meal from the heritage of Punjab', price: '25', image: './product1.jpg', count: 0}}/>
-        <ProductCard  addHandler={handlers[0]} increaseHandler={handlers[1]} decreaseHandler={handlers[2]} returnCount={handlers[3]} product = {{productID: '2', title: 'Masala Dosa', description: 'Mouth watering speciality of South India', price: '45', image: './product2.jpg', count: 0}}/>
-        <ProductCard addHandler={handlers[0]} increaseHandler={handlers[1]} decreaseHandler={handlers[2]} returnCount={handlers[3]} product = {{productID: '3', title: 'Fried Rice', description: 'Have a taste of the fresh aromatic flavoured rice we offer', price: '70', image: './product3.jpg', count: 0}}/>
-      </div>
+      <div className="post">
+       
+      {restaurant && restaurant.map(restaurant=>(
+                    <div className="post-preview" key={restaurant.id}>
+                        <Link to={`/restaurants/${restaurant.id}`}>
+                        <h2>{ restaurant.restname }</h2>
+                        <p>Ratings : { restaurant.rating }</p>
+                        <p>Total_Ratings : { restaurant.totalRating }</p>
+                        <p>Open Time : { restaurant.openTime }</p>
+                        <p>Close Time: { restaurant.closeTime }</p>
+                        </Link>
+                         
+                        </div>
+                ))}{/*
+        {restaurant && <BlogList restaurant={restaurant} title="All Restaurants"   />}
+                      */}
+  </div>
     </div>
   );
 };
