@@ -29,7 +29,9 @@
                     "id":4
                 }
             ],
-            "id":1
+            "id":1,
+            "cart": [],
+            " total": 0
         },
         {
             "restname": "foodcity",
@@ -60,7 +62,9 @@
                     "id":4
                 }
             ],
-            "id":2
+            "id":2,
+            "cart": [],
+        "total": 0
 
         },
         {
@@ -92,7 +96,9 @@
                     "id":4
                 }
             ],
-            "id":3
+            "id":3,
+            "cart": [],
+        "total": 0
         },
         {
             "restname": "tikka",
@@ -123,7 +129,9 @@
                     "id":4
                 }
             ],
-            "id":4
+            "id":4,
+            "cart": [],
+        "total": 0
         }
     ]
 }

@@ -1,21 +1,41 @@
 import React from 'react';
-import CartCard from './CartCard';
+//import CartCard from './CartCard';
 import './Cart.css';
 import { Link } from 'react-router-dom';
 
-const Cart = ({cart, price}) => {
-    return ( 
-        <>
-            <Link to="/"><button className="back-btn" style={{padding:"0.75rem", margin:"1rem", backgroundColor:"brown", border: "none", color: "whitesmoke", borderRadius: "0.2rem"}} >Back</button></Link>
-            <h1 style={{color: "#917164", fontSize: "10rem", textAlign: "center"}}>My Cart</h1>
-            <div className="cart-list" >
+const Cart = (props) => {
+
+    const {cart,increase,reduction,removeProduct,total} = props;
+    if(cart.length === 0){
+        return <h2 style={{textAlign:"center"}}>Nothings Product</h2>
+    }else{
+        return (
+            <>
                 {
-                    cart.map(item => <CartCard item={item} key={item.product.id}/>)
+                    cart.map(item =>(
+                        <div className="details cart" key={item.id}>
+                                <div className="box">
+                                <div className="row">
+                                    <h2>{item.itemName}</h2>
+                                    <span>Rs{item.price * item.count}</span>
+                                </div>
+                                    <div className="amount">
+                                    <button className="count" onClick={() => reduction(item.id)}> - </button>
+                                    <span>{item.count}</span>
+                                    <button className="count" onClick={() => increase(item.id)}> + </button>
+                                </div>
+                            </div>
+                            <div className="delete" onClick={() => removeProduct(item.id)}>X</div>
+                        </div>
+                    ))
                 }
-                {price>0?<div className="total-price">Total Cart Value: ${price.toFixed(2)}</div> : <div className="empty-cart">Cart Empty!<br />Add items to cart first.</div>}
-            </div>
-        </>
-     );
-}
- 
+                <div className="total">
+                    <Link to="/payment">Payment</Link>
+                    <h3>Total: Rs{total}</h3>
+                </div>
+            </>
+            )
+        }
+    }
+
 export default Cart;

@@ -1,11 +1,16 @@
 import useFetch from "./useFetch";
 import { useParams } from "react-router-dom";
-
+//import Cart from "./Cart/Cart";
+import { Link } from "react-router-dom";
+//import Cart from "./Cart/Cart";
+//import DataContext from "./context";
 
 const BlogDetails=()=>{
     const {id}=useParams();
     const {data:post}=useFetch(' http://localhost:8000/restaurants/' + id)
- return (
+ 
+ 
+    return (
      <div className="blog-details">
          <h2>Restaurant Details - {id}</h2>
           {post && (
@@ -44,6 +49,8 @@ const BlogDetails=()=>{
                     }}>
                          <p>ItemName: { p.itemName }</p>
                         <p>Price : { p.price}</p>
+                        <div><Link to="/Cart">Add to Cart</Link></div>
+                        
                         </div>
                 ))}
               </article>
